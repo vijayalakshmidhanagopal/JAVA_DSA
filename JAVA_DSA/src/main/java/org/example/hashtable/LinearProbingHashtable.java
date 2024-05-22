@@ -86,9 +86,9 @@ public class LinearProbingHashtable implements Hashtable {
     private void resize() {
         LinearProbingHashtable copy = new LinearProbingHashtable(_values.length * 2);
         for (int i = 0; i < _values.length; ++i) {
-            if (_values[i] != null) {
+          //  if (_values[i] != null) {
                 copy.add(_values[i]);
-            }
+          //  }
         }
         _values = copy._values;
     }

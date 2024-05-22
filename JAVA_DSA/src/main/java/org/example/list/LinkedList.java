@@ -9,11 +9,7 @@ public class LinkedList implements List{
         clear();
     }
 
-
-
-    public void insert(int index, Object value)
-            throws IndexOutOfBoundsException {
-        assert value != null :"value can't be null";
+    public void insert(int index, Object value) throws IndexOutOfBoundsException {
         if (index < 0 || index > _size) {
             throw new IndexOutOfBoundsException();
         }
@@ -21,6 +17,8 @@ public class LinkedList implements List{
         element.attachBefore(getElement(index));
         ++_size;
     }
+
+
     private Element getElement(int index) {
         Element element = _headAndTail.getNext();
         for (int i = index; i > 0; --i) {

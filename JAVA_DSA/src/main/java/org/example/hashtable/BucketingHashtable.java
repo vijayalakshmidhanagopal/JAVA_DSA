@@ -65,4 +65,7 @@ public class BucketingHashtable implements Hashtable{
                 add(values.current());
             }
         }
+    public Iterator iterator() {
+        return new HashtableIterator(_buckets);
+    }
 }

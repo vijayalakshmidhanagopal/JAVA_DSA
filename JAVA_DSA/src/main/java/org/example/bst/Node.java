@@ -46,17 +46,17 @@ public class Node {
         }
         _smaller = smaller;
     }
-
-
-    public Node getLarger() {
-        return _larger;
-    }
     public void setLarger(Node larger) {
         if (isAncestor(larger)) {
             throw new IllegalArgumentException("Setting larger child would create a cycle.");
         }
         _larger = larger;
     }
+
+    public Node getLarger() {
+        return _larger;
+    }
+
     private boolean isAncestor(Node node) {
         Node ancestor = this.getParent();
         while (ancestor != null) {
